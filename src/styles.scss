@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "./assets/style/style";
+@import "../node_modules/placeholder-loading/src/scss/placeholder-loading";
+
+.navbar-toggler:focus{
+  outline: 0;
+}
+
+.project-logo {
+  max-width: 300px !important;
+  max-height: 300px;
+}
+
+.wrapped-text {
+  white-space: pre-wrap;
+}
+
+@media (max-width: 992px) {
+  .collapse:not(.show){
+    animation: closeNavMenu .5s;
+    display: block !important;
+    margin-top: -100%;
+    opacity: 0;
+  }
+  .collapse.show{
+    animation: openNavMenu .5s;
+  }
+
+  @keyframes openNavMenu {
+    from { 
+      margin-top: -100%;
+      opacity: 0;
+    }
+    to {
+      margin-top: 0%;
+      opacity: 1;
+    }
+  }
+  @keyframes closeNavMenu {
+    from { 
+      margin-top: 0%;
+      opacity: 1;
+    }
+    to { 
+      margin-top: -100%;
+      opacity: 0;
+    }
+  }
+}
+
+
+// Gallary
+.gallary {
+  -webkit-column-count: 5; /* Chrome, Safari, Opera */
+  -moz-column-count: 5; /* Firefox */
+  column-count: 5;
+}	
+.gallary .feature_item{
+  padding: 0px;
+  box-shadow: 0 0 5px #0000008a;
+}
+.gallary img{ width: 100%; }
+
+@media (max-width: 500px) {
+  .gallary {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+  }
+}
+
+
+// Placeholder
+.tracking-content.placeholder{
+  width:60vw;
+}
+@media (min-width: 500px) {
+  .tracking-content.placeholder{ width:40vw; }
+}
+
+.ph-item {
+  border: none;
+  padding: 0px;
+  margin-bottom: 0px;
+  background-color: unset;
+
+  > * {
+    padding: 0;
+  }
+}

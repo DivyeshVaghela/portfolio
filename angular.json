@@ -28,9 +28,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.css",
+              "src/assets/style/responsive.css",
+              "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/text-typing-effect.js",
+              "node_modules/emailjs-com/dist/email.min.js",
+              "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"
+            ]
           },
           "configurations": {
             "production": {

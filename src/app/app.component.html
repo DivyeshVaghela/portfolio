@@ -1,21 +1,59 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<header class="header_area" [class.navbar_fixed]="headerFixed" #header>
+  <div class="main_menu" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container box_1620">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <a class="navbar-brand logo_h" routerLink="/home">Divyesh Vaghela</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+          (click)="isNavbarCollapsed = !isNavbarCollapsed">
+          <i class="fa fa-angle-up fa-lg" *ngIf="!isNavbarCollapsed else hamburgerIcon"></i>
+          <ng-template #hamburgerIcon>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </ng-template>
+        </button>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse offset" id="navbarSupportedContent" 
+          [ngbCollapse]="isNavbarCollapsed">
+          <ul class="nav navbar-nav menu_nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" routerLink="/home" fragment="home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/home" fragment="about">About</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/home" fragment="work">Work</a>
+            <li class="nav-item"><a class="nav-link" routerLink="/home" fragment="education-and-experience">Education & Experience</a>
+            <li class="nav-item"><a class="nav-link" routerLink="/home" fragment="contact">Contact</a></li>
+            <!-- <li class="nav-item submenu dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">Pages</a>
+              <ul class="dropdown-menu">
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio-details.html">Project Details</a></li>
+                <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
 
 <router-outlet></router-outlet>
+
+<!--================Footer Area =================-->
+<footer class="footer_area p_120">
+  <div class="container">
+    <aside class="f_widget social_widget text-center">
+      <div class="f_title">
+        <h3>Divyesh Vaghela</h3>
+        <p><a href="mailto:divyeshv789@gmail.com">divyeshv789@gmail.com</a></p>
+      </div>
+      <ul class="list">
+        <li><a href="mailto:divyeshv789@gmail.com"><i class="fa fa-envelope fa-lg"></i></a></li>
+        <li><a href="https://github.com/DivyeshVaghela"><i class="fa fa-github fa-lg"></i></a></li>
+      </ul>
+    </aside>
+  </div>
+</footer>
+<!--================End Footer Area =================-->

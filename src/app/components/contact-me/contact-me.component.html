@@ -1,0 +1,90 @@
+<section class="contact_area p_120">
+  <div class="container">
+
+    <div class="main_title" *ngIf="showHeader">
+      <h2>Contact Me</h2>
+      <p>Here's how you can connect with me..</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="contact_info">
+          <div class="info_item">
+            <i class="fa fa-home"></i>
+            <h6>Rajkot, Gujarat, India</h6>
+            <p>49 - Rameshwar Park,<br>Rajkot - 360 004</p>
+          </div>
+          <div class="info_item">
+            <i class="fa fa-phone"></i>
+            <h6>(+91) 90338 88452</h6>
+            <p>Contact anytime</p>
+          </div>
+          <div class="info_item">
+            <i class="fa fa-envelope"></i>
+            <h6><a href="mail:divyeshv789@gmail.com">divyeshv789@gmail.com</a></h6>
+            <p>Send me a quick mail!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div *ngIf="contactStatus == 'successful'" class="text-center text-sm-left text-md-right">
+          <h3>Thank you!</h3>
+          <p>Your message has been successfully sent. I will contact you very soon!</p>
+        </div>
+        <div *ngIf="contactStatus == 'unsuccessful'" class="text-center text-sm-left text-md-right">
+          <h3>Sorry!</h3>
+          <p>There was some problem in sending your message,<br>You can directly send me a mail on <a
+              href="mailto:divyeshv789@gmail.com">divyeshv789@gmail.com</a></p>
+        </div>
+
+        <form class="row contact_form" id="contactForm" novalidate="novalidate" *ngIf="contactStatus == 'not-initiated'"
+          [formGroup]="contactMe" (ngSubmit)="send()">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Enter your name" formControlName="name"
+                [class.is-invalid]="isSubmissionInitiated && contactMe.get('name').invalid">
+              <div class="invalid-feedback text-right" *ngIf="isSubmissionInitiated && contactMe.get('name').invalid">
+                <span *ngIf="contactMe.get('name').errors.required">Your name, please!</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Enter email address" formControlName="email"
+                [class.is-invalid]="isSubmissionInitiated && contactMe.get('email').invalid">
+              <div class="invalid-feedback text-right" *ngIf="isSubmissionInitiated && contactMe.get('email').invalid">
+                <span *ngIf="contactMe.get('email').errors.required">Provide your email, so that I can contact you
+                  back</span>
+                <span *ngIf="contactMe.get('email').errors.email">It seems like this is not a valid email address</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Enter Subject" formControlName="subject"
+                [class.is-invalid]="isSubmissionInitiated && contactMe.get('subject').invalid">
+              <div class="invalid-feedback text-right"
+                *ngIf="isSubmissionInitiated && contactMe.get('subject').invalid">
+                <span *ngIf="contactMe.get('subject').errors.required">Tag a proper subject</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"
+                formControlName="message"
+                [class.is-invalid]="isSubmissionInitiated && contactMe.get('message').invalid">
+              </textarea>
+              <div class="invalid-feedback text-right"
+                *ngIf="isSubmissionInitiated && contactMe.get('message').invalid">
+                <span *ngIf="contactMe.get('message').errors.required">Write your message content..</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 text-center text-md-right">
+            <button type="submit" value="submit" class="submit_btn" (click)="isSubmissionInitiated = true"
+              *ngIf="!contactMe.disabled">Send Message</button>
+            <button type="button" value="submit" class="btn" disabled="true" *ngIf="contactMe.disabled"><i
+                class="fa fa-spinner fa-spin"></i> Sending..</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

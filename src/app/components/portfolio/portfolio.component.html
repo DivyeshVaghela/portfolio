@@ -1,0 +1,31 @@
+<!--================Banner Area =================-->
+<section class="banner_area">
+  <div class="banner_inner d-flex align-items-center">
+    <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+    <div class="container">
+      <div class="banner_content text-center">
+        <h2>Portfolio</h2>
+        <div class="page_link">
+          <a routerLink="/home">Home</a>
+          <a routerLink="/portfolio">Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--================End Banner Area =================-->
+
+<!--================Projects Area =================-->
+<project-list 
+  [showHeader]="false"
+  [reverse]="true"
+  [showFooter]="false">
+</project-list>
+<!--================End Projects Area =================-->
+
+<!--================Contact Area =================-->
+<contact-me
+  [showHeader]="true"
+  id="contact">
+</contact-me>
+<!--================Contact Area =================-->

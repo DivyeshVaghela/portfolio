@@ -1,0 +1,37 @@
+  <section class="projects_area p_120">
+  <div class="container">
+
+    <div class="main_title" *ngIf="showHeader">
+      <h2>Best of my works</h2>
+      <p>Here's why I feel proud on my creations..</p>
+    </div>
+    <div class="projects_inner row">
+      <ng-container *ngIf="projects else projectsPlaceholder">
+        <div class="col-lg-4 col-sm-6 brand web" *ngFor="let project of projects">
+          <div class="projects_item">
+            <img class="img-fluid" [src]="project.showcaseImage" alt="">
+            <div class="projects_text">
+              <a routerLink="/project-details/{{ project.id }}">
+                <h4>{{ project.title }}</h4>
+              </a>
+              <p>{{ project.subtitle }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #projectsPlaceholder>
+        <div class="col-lg-4 col-sm-6 brand web" *ngFor="let i of [1,2,3]">
+          <div class="ph-item">
+            <div class="ph-picture" style="height:300px;"></div>
+          </div>
+        </div>
+      </ng-template>
+
+    </div>
+
+    <div class="text-center pt-5" *ngIf="showFooter">
+      <a routerLink="/portfolio" class="submit_btn">Explore More <i class="fa fa-chevron-right"></i></a>
+    </div>
+
+  </div>
+</section>
