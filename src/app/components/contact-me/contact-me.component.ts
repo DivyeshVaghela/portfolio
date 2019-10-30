@@ -29,7 +29,15 @@ export class ContactMeComponent implements OnInit {
   ngOnInit() {
   }
 
+  trimInput(controlName){
+    let control = this.contactMe.get(controlName);
+    if (control.value){
+      control.setValue(control.value.trim());
+    }
+  }
+
   send(){
+
     if (this.contactMe.invalid) return;
     this.contactMe.disable();
 

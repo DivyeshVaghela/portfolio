@@ -44,9 +44,9 @@
         margin-top: 27px;
         margin-bottom: 23px;
     }
-	.header_area .navbar {
+	/* .header_area .navbar {
 		background: #fff;
-	}
+	} */
     .navbar-toggler[aria-expanded="false"] span:nth-child(2) {
 		opacity: 1;
 	}

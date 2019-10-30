@@ -26,6 +26,9 @@
   .collapse.show{
     animation: openNavMenu .5s;
   }
+  .header_area .navbar.colored {
+    background: #fff !important;
+  }
 
   @keyframes openNavMenu {
     from { 
@@ -76,7 +79,7 @@
   width:60vw;
 }
 @media (min-width: 500px) {
-  .tracking-content.placeholder{ width:40vw; }
+  .tracking-content.placeholder{ width:30vw; }
 }
 
 .ph-item {

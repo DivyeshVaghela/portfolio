@@ -19,6 +19,7 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { ThoughtsComponent } from './components/thoughts/thoughts.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { HobbiesComponent } from './components/hobbies/hobbies.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     TimelineComponent,
     ThoughtsComponent,
     ContactMeComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    HobbiesComponent
   ],
   imports: [
     BrowserModule,

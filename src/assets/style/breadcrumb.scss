@@ -1,15 +1,16 @@
 /* Home Banner Area css
 ============================================================================================ */
+
 .home_banner_area{
 	z-index: 1;
-	// background: url(../img/banner/home-banner.jpg) no-repeat scroll center center;
+	background: url('assets/img/home-banner.png') no-repeat scroll center center;
 	background-size: cover;
 	.banner_inner{
 		width: 100%;
 		.home_left_img{
 			padding-top: 90px;
 		}
-		.col-lg-6{
+		.col-md-6{
 			vertical-align: middle;
 			align-self: center;
 		}
@@ -49,6 +50,11 @@
 		}
 	}	
 	
+}
+@media (max-width: 767px){
+  .home_banner_area{
+    background-position: left top;
+  }
 }
 
 .blog_banner{

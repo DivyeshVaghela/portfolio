@@ -1,6 +1,6 @@
 <header class="header_area" [class.navbar_fixed]="headerFixed" #header>
   <div class="main_menu" id="mainNav">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light" [class.colored]="!isNavbarCollapsed">
       <div class="container box_1620">
         <!-- Brand and toggle get grouped for better mobile display -->
         <a class="navbar-brand logo_h" routerLink="/home">Divyesh Vaghela</a>
@@ -23,15 +23,6 @@
             <li class="nav-item"><a class="nav-link" routerLink="/home" fragment="work">Work</a>
             <li class="nav-item"><a class="nav-link" routerLink="/home" fragment="education-and-experience">Education & Experience</a>
             <li class="nav-item"><a class="nav-link" routerLink="/home" fragment="contact">Contact</a></li>
-            <!-- <li class="nav-item submenu dropdown">
-              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                aria-expanded="false">Pages</a>
-              <ul class="dropdown-menu">
-                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="portfolio-details.html">Project Details</a></li>
-                <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-              </ul>
-            </li> -->
           </ul>
         </div>
       </div>
@@ -50,8 +41,9 @@
         <p><a href="mailto:divyeshv789@gmail.com">divyeshv789@gmail.com</a></p>
       </div>
       <ul class="list">
-        <li><a href="mailto:divyeshv789@gmail.com"><i class="fa fa-envelope fa-lg"></i></a></li>
-        <li><a href="https://github.com/DivyeshVaghela"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a href="mailto:divyeshv789@gmail.com" target="_blank"><i class="fa fa-envelope fa-lg"></i></a></li>
+        <li><a href="https://github.com/DivyeshVaghela" target="_blank"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/divyesh-vaghela-b1b12a197" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a></li>
       </ul>
     </aside>
   </div>

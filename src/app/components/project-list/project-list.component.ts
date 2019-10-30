@@ -24,7 +24,7 @@ export class ProjectListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    //load Projects
+    // load Projects
     this.projectService.list(this.reverse, this.limit ? this.limit : null)
       .pipe(take(1))
       .subscribe(projects => {

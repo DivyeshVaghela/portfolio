@@ -18,18 +18,25 @@
               </ng-template>
             </div>
             <div class="tracking-date">
-              <ng-container *ngIf="timelineItem.startMonth">{{ timelineItem.startMonth }}, </ng-container>
-              {{ timelineItem.startYear }}
-              <span>to
-                <ng-container *ngIf="timelineItem.endYear else toPresent">
-                  <ng-container *ngIf="timelineItem.endMonth">{{ timelineItem.endMonth }}, </ng-container>
-                  {{ timelineItem.endYear }}
-                </ng-container>
-                <ng-template #toPresent>present</ng-template>
-              </span>
+              
+              <ng-container *ngIf="timelineItem.startYear else onlyEnd">
+                <ng-container *ngIf="timelineItem.startMonth">{{ timelineItem.startMonth }}, </ng-container>
+                {{ timelineItem.startYear }}
+                <span>to
+                  <ng-container *ngIf="timelineItem.endYear else toPresent">
+                    <ng-container *ngIf="timelineItem.endMonth">{{ timelineItem.endMonth }}, </ng-container>
+                    {{ timelineItem.endYear }}
+                  </ng-container>
+                  <ng-template #toPresent>present</ng-template>
+                </span>
+              </ng-container>
+              <ng-template #onlyEnd>
+                <ng-container *ngIf="timelineItem.endMonth">{{ timelineItem.endMonth }}, </ng-container>
+                {{ timelineItem.endYear }}
+              </ng-template>
             </div>
             <div class="feature_item tracking-content">
-              <strong>{{ timelineItem.title }}</strong>
+              <b>{{ timelineItem.title }}</b>
               <p>
                 {{ timelineItem.from }} <br>
                 <span *ngIf="timelineItem.location">{{ timelineItem.location }}</span>

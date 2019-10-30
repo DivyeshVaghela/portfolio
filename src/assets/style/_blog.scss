@@ -2,37 +2,40 @@
 /* Latest Blog Area css
 ============================================================================================ */
 .latest_blog_area{
-	
+	background: #f9f9ff;
 }
 .latest_blog_inner{
 	
 }
 .l_blog_item{
-	.l_blog_img{
-		
+	.l_blog_img img{
+    border-radius: 5px;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 	}
 	.l_blog_text{
+    > *:first-child{
+      margin-top: 24px;
+      margin-bottom: 15px;
+    }
 		.date{
-			margin-top: 24px;
-			margin-bottom: 15px;
 			a{
 				color: $pfont;
 				font-size: 12px;
 				font-family: $rob;
+        @include transition;
 			}
 		}
 		h4{
 			font-size: 21px;
 			color: $dip;
 			margin-bottom: 20px;
-			@include transition;
 			font-family: $hee;
 			font-weight: bold;
 			text-transform: uppercase;
 			max-width: 300px;
-			&:hover{
-				color: $baseColor;
-			}
 		}
 		p{
 			margin-bottom: 0px;
