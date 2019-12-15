@@ -19,9 +19,9 @@
 	============================================================================================ */
 	/* Home Banner Area css
 	============================================================================================ */
-	.home_banner_area .banner_inner {
+	/* .home_banner_area .banner_inner {
 		padding: 100px 0px;
-	}
+	} */
 	/* End Home Banner Area css
 	============================================================================================ */
 	.header_area .navbar .tickets_btn {
@@ -107,7 +107,7 @@
 		margin-right: 0px;
 	}
 	.header_area + section, .header_area + row, .header_area + div {
-		margin-top: 71px;
+		margin-top: 0px;
 	}
 	.home_banner_area .banner_inner .banner_content .banner_map_img {
 		display: none;
@@ -179,7 +179,8 @@
     text-align: center;
   }
 	.home_banner_area .banner_inner .banner_content {
-		padding-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 	}
 	.tools_expert {
 		margin-top: 50px;
@@ -261,7 +262,7 @@
 		display: none;
 	}
 	.header_area + section, .header_area + row, .header_area + div {
-		margin-top: 71px;
+		margin-top: 0px;
 	}
     /* Home Banner Area css
 	============================================================================================ */
