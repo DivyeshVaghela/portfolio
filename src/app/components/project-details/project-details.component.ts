@@ -12,7 +12,7 @@ import { Project } from 'src/app/models/Project.model';
   styleUrls: ['./project-details.component.scss']
 })
 export class ProjectDetailsComponent implements OnInit {
-
+  
   projectId: string;
   project: Project;
 

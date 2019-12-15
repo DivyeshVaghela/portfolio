@@ -1,18 +1,18 @@
 <!--================Banner Area =================-->
-<section class="banner_area">
+<section class="banner_area overflow-x-hidden">
   <div class="banner_inner d-flex align-items-center">
     <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
     <div class="container">
-      <div class="banner_content text-center">
+      <div class="banner_content text-center" animateOnScroll>
         <ng-container *ngIf="project else headerPlaceholder">
-          <img *ngIf="project.logo else projectTitle" [src]="project.logo" class="img-fluid project-logo">
+          <img *ngIf="project.logo else projectTitle" [img-preloader]="project.logo" class="img-fluid project-logo" animateOnScroll>
           <ng-template #projectTitle>
-            <h2>{{ project.title }}</h2>
+            <h2 animateOnScroll>{{ project.title }}</h2>
           </ng-template>
           <div class="page_link">
             <a routerLink="/home">Home</a>
             <a routerLink="/portfolio">Portfolio</a>
-            <a>{{ project.title }}</a>
+            <a animateOnScroll>{{ project.title }}</a>
           </div>
         </ng-container>
         <ng-template #headerPlaceholder>
@@ -37,22 +37,22 @@
 <!--================End Banner Area =================-->
 
 <!--================Portfolio Details Area =================-->
-<section class="portfolio_details_area p_120">
+<section class="portfolio_details_area p_120 overflow-x-hidden">
   <div class="container">
     <div class="portfolio_details_inner">
       <div class="row">
         <div class="col-md-6">
           <div class="left_img">
-            <img class="img-fluid" *ngIf="project else imagePlceholder" [src]="project.showcaseImage" [alt]="project.title">
+            <img class="img-fluid" *ngIf="project else imagePlceholder" [img-preloader]="project.showcaseImage" [alt]="project.title" animateOnScroll>
             <ng-template #imagePlceholder>
-              <div class="ph-item">
+              <div class="ph-item" animateOnScroll>
                 <div class="ph-picture" style="height: 400px;"></div>
               </div>
             </ng-template>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="portfolio_right_text" *ngIf="project else contentPlaceholder">
+          <div class="portfolio_right_text" *ngIf="project else contentPlaceholder" animateOnScroll>
             <h4>
               {{ project.title }}
               <a href="{{ project.github }}" target="_blank" class="btn border-0 btn-lg pull-right">
@@ -76,7 +76,7 @@
           <ng-template #contentPlaceholder>
             <div class="ph-item">
               <div class="ph-col-12">
-                <div class="portfolio_right_text ph-row">
+                <div class="portfolio_right_text ph-row" animateOnScroll>
                   <div class="ph-col-4 big"></div>
                   <div class="ph-col-8 empty"></div>
                   <div class="ph-col-6"></div>
@@ -101,32 +101,32 @@
 <!--================End Portfolio Details Area =================-->
 
 <!--================Screenshot Area =================-->
-<section class="feature_area p_120" *ngIf="project && project.screenshots.length > 0">
+<section class="feature_area p_120 overflow-x-hidden" *ngIf="project && project.screenshots.length > 0">
   <div class="container">
-    <div class="main_title">
+    <div class="main_title" animateOnScroll>
       <h2>Few Screnshots</h2>
       <p>Glimpse of project..</p>
     </div>
 
     <div class="feature_inner gallary">
-      <div class="feature_item" *ngFor="let screenshot of project.screenshots">
+      <div class="feature_item" *ngFor="let screenshot of project.screenshots" animateOnScroll>
         <a [href]="screenshot.image" data-type="image" data-fancybox="screenshots" [attr.data-caption]="screenshot.caption">
-          <img class="img-fluid" [src]="screenshot.image" alt="">
+          <img class="img-fluid" [img-preloader]="screenshot.image" alt="">
         </a>
       </div>
     </div>
 
   </div>
 </section>
-<section class="feature_area p_120" *ngIf="!project">
+<section class="feature_area p_120 overflow-x-hidden" *ngIf="!project">
   <div class="container">
-    <div class="main_title">
+    <div class="main_title" animateOnScroll>
       <h2>Few Screnshots</h2>
       <p>Glimpse of project..</p>
     </div>
 
     <div class="row">
-      <div class="col-6 col-md-3" *ngFor="let i of [1,2,3,4,5,6,7,8]">
+      <div class="col-6 col-md-3" *ngFor="let i of [1,2,3,4,5,6,7,8]" animateOnScroll>
         <div class="ph-item">
           <div class="ph-picture"></div>
         </div>

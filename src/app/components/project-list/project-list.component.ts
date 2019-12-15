@@ -2,8 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { take } from 'rxjs/operators';
 
-import { Project } from 'src/app/models/Project.model';
 import { ProjectService } from 'src/app/services/project.service';
+import { Project } from 'src/app/models/Project.model';
 
 @Component({
   selector: 'project-list',

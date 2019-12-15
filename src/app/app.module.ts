@@ -20,6 +20,9 @@ import { ThoughtsComponent } from './components/thoughts/thoughts.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { HobbiesComponent } from './components/hobbies/hobbies.component';
+import { AnimateOnScrollDirective } from './directives/animate-on-scroll.directive';
+import { ImgPreloaderDirective } from './directives/img-preloader.directive';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { HobbiesComponent } from './components/hobbies/hobbies.component';
     ThoughtsComponent,
     ContactMeComponent,
     PortfolioComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    AnimateOnScrollDirective,
+    ImgPreloaderDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

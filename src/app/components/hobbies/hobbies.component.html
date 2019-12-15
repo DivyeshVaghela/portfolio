@@ -1,6 +1,6 @@
-<section class="latest_blog_area p_120">
+<section class="latest_blog_area p_120 overflow-x-hidden">
   <div class="container">
-    <div class="main_title" *ngIf="showHeader">
+    <div class="main_title" *ngIf="showHeader" animateOnScroll>
       <h2>Hobbies</h2>
       <p>Here's what I am interested in other than being a 'Techie'..</p>
     </div>
@@ -8,9 +8,9 @@
     <div class="row latest_blog_inner">
       
       <div class="col-md-6 col-lg-4 mx-auto">
-        <div class="l_blog_item">
+        <div class="l_blog_item" animateOnScroll>
           <div class="l_blog_img">
-            <img class="img-fluid" src="assets/img/hobby_reading.jpg" alt="">
+            <img class="img-fluid" img-preloader="assets/img/hobby_reading.jpg" alt="">
           </div>
           <div class="l_blog_text">
             <!-- <div class="date">
@@ -25,9 +25,9 @@
         </div>
       </div>
       <div class="col-md-6 col-lg-4 mx-auto">
-        <div class="l_blog_item">
+        <div class="l_blog_item" animateOnScroll>
           <div class="l_blog_img">
-            <img class="img-fluid" src="assets/img/hobby_exploration.jpg" alt="">
+            <img class="img-fluid" img-preloader="assets/img/hobby_exploration.jpg" alt="">
           </div>
           <div class="l_blog_text">
             <!-- <div class="date">
@@ -46,9 +46,9 @@
         </div>
       </div>
       <div class="col-md-6 col-lg-4 mx-auto">
-        <div class="l_blog_item">
+        <div class="l_blog_item" animateOnScroll>
           <div class="l_blog_img">
-            <img class="img-fluid" src="assets/img/hobby_music.jpg" alt="">
+            <img class="img-fluid" img-preloader="assets/img/hobby_music.jpg" alt="">
           </div>
           <div class="l_blog_text">
             <!-- <div class="date">

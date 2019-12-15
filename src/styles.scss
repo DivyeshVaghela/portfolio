@@ -9,7 +9,7 @@
 
 .project-logo {
   max-width: 300px !important;
-  max-height: 300px;
+  max-height: 200px;
 }
 
 .wrapped-text {
@@ -91,4 +91,21 @@
   > * {
     padding: 0;
   }
+}
+
+.overflow-hidden {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+[animateOnScroll] {
+  opacity: 0;
 }

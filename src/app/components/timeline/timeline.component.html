@@ -1,7 +1,7 @@
-<section class="timeline_area p_120">
+<section class="timeline_area p_120 overflow-x-hidden">
   <div class="container">
 
-    <div class="main_title" *ngIf="showHeader">
+    <div class="main_title" *ngIf="showHeader" animateOnScroll>
       <h2>Education and Experience</h2>
       <p>Here's how I reached where I am today..</p>
     </div>
@@ -10,7 +10,7 @@
       <div class="tracking-list">
 
         <ng-container *ngIf="timeline && timeline.length > 0 else timelinePlaceholder">
-          <div class="tracking-item" *ngFor="let timelineItem of timeline">
+          <div class="tracking-item" *ngFor="let timelineItem of timeline" animateOnScroll>
             <div class="tracking-icon status-intransit">
               <img *ngIf="timelineItem.category == 'education' else professionIcon" src="assets/img/education.png">
               <ng-template #professionIcon>
@@ -46,7 +46,7 @@
         </ng-container>
 
         <ng-template #timelinePlaceholder>
-          <div class="tracking-item" *ngFor="let i of [1,2,3,4]">
+          <div class="tracking-item" *ngFor="let i of [1,2,3,4]" animateOnScroll>
             <div class="tracking-icon status-intransit">
               <div class="ph-avatar" style="min-width: unset !important;"></div>
             </div>

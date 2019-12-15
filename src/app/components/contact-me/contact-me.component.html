@@ -1,13 +1,13 @@
-<section class="contact_area p_120">
+<section class="contact_area p_120 overflow-x-hidden">
   <div class="container">
 
-    <div class="main_title" *ngIf="showHeader">
+    <div class="main_title" *ngIf="showHeader" animateOnScroll>
       <h2>Contact Me</h2>
       <p>Here's how you can connect with me..</p>
     </div>
 
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-lg-3" animateOnScroll>
         <div class="contact_info">
           <div class="info_item">
             <i class="fa fa-home"></i>
@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-9">
+      <div class="col-lg-9" animateOnScroll>
         <div *ngIf="contactStatus == 'successful'" class="text-center text-sm-left text-md-right">
           <h3>Thank you!</h3>
           <p>Your message has been successfully sent. I will contact you very soon!</p>
