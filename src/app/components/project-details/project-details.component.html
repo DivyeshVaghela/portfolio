@@ -55,7 +55,7 @@
           <div class="portfolio_right_text" *ngIf="project else contentPlaceholder" animateOnScroll>
             <h4>
               {{ project.title }}
-              <a href="{{ project.github }}" target="_blank" class="btn border-0 btn-lg pull-right">
+              <a href="{{ project.github }}" target="_blank" class="btn border-0 btn-lg pull-right text-info">
                   <i class="fa fa-github fa-lg"></i></a>
               <ng-container *ngIf="project.subtitle"><br><small>{{ project.subtitle }}</small></ng-container>
             </h4>
@@ -104,7 +104,7 @@
 <section class="feature_area p_120 overflow-x-hidden" *ngIf="project && project.screenshots.length > 0">
   <div class="container">
     <div class="main_title" animateOnScroll>
-      <h2>Few Screnshots</h2>
+      <h2>Screenshots</h2>
       <p>Glimpse of project..</p>
     </div>
 
@@ -121,7 +121,7 @@
 <section class="feature_area p_120 overflow-x-hidden" *ngIf="!project">
   <div class="container">
     <div class="main_title" animateOnScroll>
-      <h2>Few Screnshots</h2>
+      <h2>Screenshots</h2>
       <p>Glimpse of project..</p>
     </div>
 

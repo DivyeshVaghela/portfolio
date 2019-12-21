@@ -19,7 +19,6 @@ export class UserService {
     this.userPreferencesObs = new BehaviorSubject<UserPreference>(null);
     
     const userPref = this.getUserPreferences();
-    console.log(userPref);
     if (userPref != null){
       this.userPreferencesObs.next(userPref);
     }
