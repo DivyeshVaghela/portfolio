@@ -19,10 +19,10 @@ export class ContactMeComponent implements OnInit {
     private emailjsService: EmailjsService
   ) {
     this.contactMe = new FormGroup({
-      name: new FormControl(null, [Validators.required]),
+      name: new FormControl(null, [Validators.required, Validators.pattern('^\\s*[a-zA-Z\']+(\\s*[a-zA-Z\']*)*\\s*$')]),
       email: new FormControl(null, [Validators.required, Validators.email]),
-      subject: new FormControl(null, [Validators.required]),
-      message: new FormControl(null, [Validators.required])
+      subject: new FormControl(null, [Validators.required, Validators.pattern('^(?!\\s+$).+')]),  //Only space not allowed
+      message: new FormControl(null, [Validators.required, Validators.pattern('^(?!\\s+$)(.+\\n*)*')])
     });
   }
 
@@ -42,10 +42,10 @@ export class ContactMeComponent implements OnInit {
     this.contactMe.disable();
 
     this.emailjsService.send({
-      fromEmail: this.contactMe.get('email').value,
-      fromName: this.contactMe.get('name').value,
-      subject: this.contactMe.get('subject').value,
-      message: this.contactMe.get('message').value
+      fromEmail: this.contactMe.get('email').value.trim(),
+      fromName: this.contactMe.get('name').value.trim(),
+      subject: this.contactMe.get('subject').value.trim(),
+      message: this.contactMe.get('message').value.trim()
     }).then((response) => {
       this.contactStatus = "successful";
     }, (error) => {
