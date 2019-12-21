@@ -1,7 +1,8 @@
 /* Footer Area css
 ============================================================================================ */
 .footer_area{
-	background: #000410;
+	// background: #000410;
+	background: black;
 }
 .footer_inner{
 	
@@ -23,7 +24,7 @@
 		font-size: 14px;
 		line-height: 24px;
 		font-family: $rob;
-		color: $pfont;
+		color: var(--pfont);
 		margin-bottom: 30px;
 		a{
 			color: $baseColor;
@@ -39,7 +40,7 @@
 		font-size: 14px;
 		line-height: 24px;
 		font-family: $rob;
-		color: $pfont;
+		color: var(--pfont);
 		margin-bottom: 15px;
 	}
 	.input-group{
@@ -81,7 +82,7 @@
 		font-size: 14px;
 		line-height: 24px;
 		font-family: $rob;
-		color: $pfont;
+		color: var(--pfont);
 		margin-bottom: 10px;
 	}
 	.list{

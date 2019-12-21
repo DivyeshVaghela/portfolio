@@ -25,9 +25,9 @@
             color: $rob;
             font-weight: bold;
             margin-bottom: 0px;
-			color: $dip;
+			color: var(--dip);
             a{
-                color: $dip;
+                color: var(--dip);
             }
         }
         p{

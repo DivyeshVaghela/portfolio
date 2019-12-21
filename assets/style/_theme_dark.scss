@@ -1,0 +1,29 @@
+body.dark-theme {
+  /* Dark theme colors */
+  --dip: rgb(212, 211, 211);
+  --pfont: #bebebe;
+
+  --primary-color: #070707;
+  --secondary-color: #0f0f0f;
+
+
+  /* Element specific changes */
+  .home_banner_area::before {
+    filter: brightness(0.1);
+  }
+
+  .theme-icon {
+    filter: invert(1);
+  }
+
+  /* Form control */
+  .form-control {
+    background-color: var(--primary-color);
+    color: var(--dip);
+  }
+
+  /* Placeholder */
+  .ph-item::before {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, var(--primary-color) 50%, rgba(255, 255, 255, 0) 54%) 50% 50%
+  }
+}

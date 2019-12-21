@@ -1,7 +1,7 @@
 /* Projects Area css
 ============================================================================================ */
 .projects_area{
-	background: #fff;
+	background: var(--primary-color);
 }
 .projects_fillter{
 	.filter{
@@ -14,7 +14,7 @@
 			a{
 				font-size: 13px;
 				font-family: $rob;
-				color: $pfont;
+				color: var(--pfont);
 			}
 			&:last-child{
 				margin-right: 0px;
@@ -59,7 +59,7 @@
 			font-size: 21px;
 			font-family: $hee;
 			font-weight: bold;
-			color: $dip;
+			color: var(--dip);
 			margin-bottom: 5px;
 			@include transition;
 			text-transform: uppercase;
@@ -92,7 +92,7 @@
 /* Portfolio Details Area css
 ============================================================================================ */
 .portfolio_details_area{
-	background: #fff;
+	background: var(--primary-color);
 }
 .portfolio_details_inner{
 	.row{
@@ -108,7 +108,7 @@
 	.portfolio_right_text{
 		padding-left: 98px;
 		h4{
-			color: $dip;
+			color: var(--dip);
 			font-size: 21px;
 			text-transform: uppercase;
 			margin-bottom: 18px;
@@ -122,12 +122,12 @@
 				margin-bottom: 7px;
 				span{
 					font-size: 14px;
-					color: $dip;
+					color: var(--dip);
 					font-weight: 500;
 					width: 97px;
 					display: inline-block;
 				}
-				color: $pfont;
+				color: var(--pfont);
 				font-weight: normal;
 				font-size: 14px;
 				&:last-child{

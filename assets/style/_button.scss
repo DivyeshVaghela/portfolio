@@ -68,9 +68,9 @@
 
 .white_btn{
 	display: inline-block;
-	background: #f9f9ff;
+	background: var(--secondary-color);
 	padding: 0px 50px;
-	color: $dip;
+	color: var(--dip);
 	font-family: $rob;
 	font-size: 12px;
 	font-weight: 500;
@@ -106,7 +106,7 @@
 .white_bg_btn{
 	background: #fff;
 	display: inline-block;
-	color: $dip;
+	color: var(--dip);
 	line-height: 40px;
 	padding: 0px 28px;
 	font-size: 14px;
@@ -122,12 +122,12 @@
 }
 .blog_btn{
 	border: 1px solid #eeeeee;
-	background: #f9f9ff;
+	background: var(--secondary-color);
 	padding: 0px 32px;
 	font-size: 13px;
 	font-weight: 500;
 	font-family: $rob;
-	color: $dip;
+	color: var(--dip);
 	line-height: 34px;
 	display: inline-block;
 	&:hover{

@@ -45,11 +45,11 @@
 .elements_button{
 	.title_color{
 		margin-bottom: 30px;
-		color: $dip;
+		color: var(--dip);
 	}
 }
 .title_color{
-	color: $dip;
+	color: var(--dip);
 }
 .button-group-area{
 	margin-top: 15px;
@@ -67,7 +67,7 @@
 	}
 	.link{
 		text-decoration: underline;
-		color: $dip;
+		color: var(--dip);
 		background: transparent;
 		&:hover{
 			color: #fff;
@@ -424,23 +424,23 @@ h6 {
 
 .genric-btn.default {
   color: #222222;
-  background: #f9f9ff;
+  background: var(--secondary-color);
   border: 1px solid transparent;
 }
 
 .genric-btn.default:hover {
-  border: 1px solid #f9f9ff;
+  border: 1px solid var(--secondary-color);
   background: #fff;
 }
 
 .genric-btn.default-border {
-  border: 1px solid #f9f9ff;
+  border: 1px solid var(--secondary-color);
   background: #fff;
 }
 
 .genric-btn.default-border:hover {
   color: #222222;
-  background: #f9f9ff;
+  background: var(--secondary-color);
   border: 1px solid transparent;
 }
 
@@ -566,33 +566,33 @@ h6 {
 
 .genric-btn.link {
   color: #222222;
-  background: #f9f9ff;
+  background: var(--secondary-color);
   text-decoration: underline;
   border: 1px solid transparent;
 }
 
 .genric-btn.link:hover {
   color: #222222;
-  border: 1px solid #f9f9ff;
+  border: 1px solid var(--secondary-color);
   background: #fff;
 }
 
 .genric-btn.link-border {
   color: #222222;
-  border: 1px solid #f9f9ff;
+  border: 1px solid var(--secondary-color);
   background: #fff;
   text-decoration: underline;
 }
 
 .genric-btn.link-border:hover {
   color: #222222;
-  background: #f9f9ff;
+  background: var(--secondary-color);
   border: 1px solid transparent;
 }
 
 .genric-btn.disable {
   color: #222222, 0.3;
-  background: #f9f9ff;
+  background: var(--secondary-color);
   border: 1px solid transparent;
   cursor: not-allowed;
 }
@@ -789,7 +789,7 @@ h6 {
   line-height: 40px;
   border: none;
   outline: none;
-  background: #f9f9ff;
+  background: var(--secondary-color);
   padding: 0 20px;
 }
 
@@ -823,7 +823,7 @@ h6 {
   line-height: 40px;
   border: none;
   outline: none;
-  background: #f9f9ff;
+  background: var(--secondary-color);
   padding: 0 20px;
   height: 100px;
   resize: none;
@@ -839,7 +839,7 @@ h6 {
   line-height: 40px;
   border: 1px solid transparent;
   outline: none;
-  background: #f9f9ff;
+  background: var(--secondary-color);
   padding: 0 20px;
 }
 
@@ -854,7 +854,7 @@ h6 {
   line-height: 40px;
   border: 1px solid transparent;
   outline: none;
-  background: #f9f9ff;
+  background: var(--secondary-color);
   padding: 0 20px;
 }
 
@@ -869,7 +869,7 @@ h6 {
   line-height: 40px;
   border: 1px solid transparent;
   outline: none;
-  background: #f9f9ff;
+  background: var(--secondary-color);
   padding: 0 20px;
 }
 
@@ -1103,7 +1103,7 @@ h6 {
 }
 .single-defination{
 	h4{
-		color: $dip;
+		color: var(--dip);
 	}
 }
 
@@ -1388,7 +1388,7 @@ h6 {
   border: none;
   border-radius: 0px;
   height: 40px;
-  background: #f9f9ff !important;
+  background: var(--secondary-color) !important;
   padding-left: 45px;
   padding-right: 40px;
   width: 100%;
