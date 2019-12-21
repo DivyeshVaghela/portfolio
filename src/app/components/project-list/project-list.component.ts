@@ -17,6 +17,7 @@ export class ProjectListComponent implements OnInit {
   @Input() limit: number;
   @Input() reverse: boolean = true;
 
+  loadingProjects: boolean = true;
   projects: Project[];
 
   constructor(
@@ -29,6 +30,7 @@ export class ProjectListComponent implements OnInit {
       .pipe(take(1))
       .subscribe(projects => {
         this.projects = projects;
+        this.loadingProjects = false;
       });
   }
 

@@ -45,7 +45,7 @@
         margin-bottom: 23px;
     }
 	/* .header_area .navbar {
-		background: #fff;
+		background: var(--primary-color;
 	} */
     .navbar-toggler[aria-expanded="false"] span:nth-child(2) {
 		opacity: 1;
@@ -90,8 +90,8 @@
         line-height: 40px;
         margin-right: 0px;
         display: block;
-		border-bottom: 1px solid #ededed33;
-		border-radius: 0px;
+        /* border-bottom: 1px solid #ededed33; */
+        border-radius: 0px;
     }
     .header_area .navbar .search{
         margin-left: 0px;
@@ -177,6 +177,7 @@
   }
   .home_left_img{
     text-align: center;
+    margin-bottom: -20px;
   }
 	.home_banner_area .banner_inner .banner_content {
     padding-top: 50px;

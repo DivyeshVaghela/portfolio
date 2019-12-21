@@ -17,7 +17,7 @@
                 .nav-link{
                     font: 500 12px/100px $rob;
                     text-transform: uppercase;
-                    color: $dip;
+                    color: var(--dip);
                     padding: 0px; 
                     display: inline-block;
                     &:after{
@@ -37,7 +37,7 @@
                         border-radius: 0px;
                         box-shadow: none;
                         margin: 0px;
-                        background: #fff;
+                        background: var(--primary-color);
                         @media (min-width: 992px){
                             position: absolute;
                             top: 120%;
@@ -76,7 +76,7 @@
                             transition: all 0.4s linear;
                             .nav-link{
                                 line-height: 45px;
-                                color: $dip;
+                                color: var(--dip);
                                 padding: 0px 30px;
                                 transition: all 150ms linear;
                                 display: block;
@@ -115,7 +115,7 @@
             font-size: 12px;
             line-height: 60px;
             display: inline-block;
-            color: $dip;
+            color: var(--dip);
             margin-left: 80px;
             i{
                 font-weight: 600;
@@ -129,7 +129,7 @@
 			top: -70px;
 			left: 0;
 			right: 0;
-			background: #fff;
+			background: var(--primary-color);
 			transform: translateY(70px);
 			transition: transform 500ms ease, background 500ms ease;
 			-webkit-transition: transform 500ms ease, background 500ms ease;
@@ -188,7 +188,7 @@
 						.nav-item{
 							.nav-link{
 								line-height: 70px;
-								color: $dip;
+								color: var(--dip);
 							}
 						}
 					}

@@ -11,10 +11,10 @@
           <div class="projects_item" animateOnScroll>
             <img class="img-fluid" [img-preloader]="project.showcaseImage" alt="">
             <div class="projects_text">
-              <a routerLink="/portfolio/{{ project.id }}">
-                <h4>{{ project.title }}</h4>
+              <a routerLink="/project/{{ project.id }}">
+                <h4 class="text-color-black">{{ project.title }}</h4>
               </a>
-              <p>{{ project.subtitle }}</p>
+              <p class="text-color-off-black">{{ project.subtitle }}</p>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@
     </div>
 
     <div class="text-center pt-5" *ngIf="showFooter" animateOnScroll>
-      <a routerLink="/portfolio" class="submit_btn">Explore More <i class="fa fa-chevron-right"></i></a>
+      <a routerLink="/project" class="submit_btn">Explore More <i class="fa fa-chevron-right"></i></a>
     </div>
 
   </div>

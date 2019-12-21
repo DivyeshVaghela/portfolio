@@ -4,9 +4,28 @@ $hee: 'Heebo', sans-serif;
 
 
 /*Color Variables*/
-$baseColor: #8490ff; 
+$baseColor: #8490ff;
 $dip: #222222;
-$pfont: #777777; 
+$pfont: #777777;
+
+:root{
+  /* Light theme colors */
+  --primary-color: #fff;
+  --secondary-color: #f9f9ff;
+
+  --dip: #222222;
+  --pfont: #777777;
+
+  // --primary-color: #070707;
+  // --secondary-color: #0c0c0c;
+
+  /* Dark theme colors */
+  // --dip: rgb(212, 211, 211);
+  // --pfont: #bebebe;
+
+  // --primary-color: #070707;
+  // --secondary-color: #0f0f0f;
+}
 
 
 /*=================== fonts ====================*/

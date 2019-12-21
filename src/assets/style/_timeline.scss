@@ -84,7 +84,7 @@
   text-align:center;
   border-radius:50%;
   font-size:1.1rem;
-  background-color:#fff;
+  background-color: var(--primary-color);
   color:#fff
  }
  .tracking-item .tracking-icon.status-sponsored {
@@ -110,7 +110,6 @@
  }
  .tracking-item .tracking-icon.status-intransit {
   color:#e5e5e5;
-  border:1px solid #e5e5e5;
   font-size:.6rem
  }
  .tracking-item .tracking-icon.status-intransit img{

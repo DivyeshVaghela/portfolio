@@ -1,0 +1,55 @@
+.theme-text-color {
+  color: var(--dip) !important;
+}
+
+.theme-icon {
+  cursor: pointer;
+
+  &.medium {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-bottom: 1em;
+  }
+
+  &.small {
+    height: 1.3rem;
+    width: 1.3rem;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 992px) {
+  .collapse:not(.show){
+    animation: closeNavMenu .5s;
+    display: block !important;
+    margin-top: -100%;
+    opacity: 0;
+  }
+  .collapse.show{
+    animation: openNavMenu .5s;
+  }
+  .header_area .navbar.colored {
+    background: var(--primary-color) !important;
+  }
+
+  @keyframes openNavMenu {
+    from { 
+      margin-top: -100%;
+      opacity: 0;
+    }
+    to {
+      margin-top: 0%;
+      opacity: 1;
+    }
+  }
+  @keyframes closeNavMenu {
+    from { 
+      margin-top: 0%;
+      opacity: 1;
+    }
+    to { 
+      margin-top: -100%;
+      opacity: 0;
+    }
+  }
+}

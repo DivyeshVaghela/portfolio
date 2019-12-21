@@ -2,7 +2,7 @@
 /* Latest Blog Area css
 ============================================================================================ */
 .latest_blog_area{
-	background: #f9f9ff;
+	background: var(--secondary-color);
 }
 .latest_blog_inner{
 	
@@ -22,7 +22,7 @@
     }
 		.date{
 			a{
-				color: $pfont;
+				color: var(--pfont);
 				font-size: 12px;
 				font-family: $rob;
         @include transition;
@@ -30,7 +30,7 @@
 		}
 		h4{
 			font-size: 21px;
-			color: $dip;
+			color: var(--dip);
 			margin-bottom: 20px;
 			font-family: $hee;
 			font-weight: bold;
@@ -105,7 +105,7 @@
 	.causes_text{
 		padding: 30px 35px 40px 30px;
 		h4{
-			color: $dip;
+			color: var(--dip);
 			font-family: $rob;
 			font-size: 18px;
 			font-weight: 600;
@@ -118,7 +118,7 @@
 		p{
 			font-size: 14px;
 			line-height: 24px;
-			color: $pfont;
+			color: var(--pfont);
 			font-weight: 300;
 			margin-bottom: 0px;
 		}
@@ -139,7 +139,7 @@
 				border-color: #eeeeee;
 				background: #fff;
 				font-size: 14px;
-				color: $dip;
+				color: var(--dip);
 			}
 		}
 	}
@@ -168,7 +168,7 @@
             padding: 10px 0px 13px;
             transition: all 0.3s linear;
             &:hover{
-                color: $pfont;
+                color: var(--pfont);
             }
         }
     }
@@ -192,7 +192,7 @@
         display: inline-block;
         padding: 1px 18px;
         text-align: center;
-        color: $dip;
+        color: var(--dip);
         &:before{
             background: $baseColor;
         }
@@ -280,9 +280,9 @@
         padding-bottom: 20px;
         a{
             font: 300 14px/21px $rob;
-            color: $dip;
+            color: var(--dip);
             &:hover{
-                color: $pfont;
+                color: var(--pfont);
             }
 			&.active{
 				color: $baseColor;
@@ -298,7 +298,7 @@
                 padding-bottom: 12px;
                 display: inline-block;
                 i{
-                    color: $dip;
+                    color: var(--dip);
                     font-size: 16px;
                     font-weight: 600;
                     padding-left: 15px;
@@ -322,7 +322,7 @@
     h2{
         font-size: 24px;
         line-height: 36px;
-        color: $dip;
+        color: var(--dip);
         font-weight: 600;
         transition: all 0.3s linear;
         &:hover{
@@ -337,7 +337,7 @@
     font-size: 14px;
     line-height: 36px;
     display: inline-block;
-    color: $dip;
+    color: var(--dip);
     font-weight: 500;
     padding: 0px 30px;
     background: #fff;
@@ -396,7 +396,7 @@
         h4{
             font-size: 18px;
             line-height: 20px;
-            color: $dip;
+            color: var(--dip);
             margin-bottom: 5px;
 			margin-top: 30px;
         }
@@ -407,7 +407,7 @@
             padding: 7px 0px 15px;
             a{
                 font-size: 14px;
-                color: $dip;
+                color: var(--dip);
                 transition: all 0.2s linear;
                 & + a{
                     margin-left: 20px;
@@ -427,7 +427,7 @@
                 h3{
                     font-size: 14px;
                     line-height: 20px;
-                    color: $dip;
+                    color: var(--dip);
                     margin-bottom: 4px;
                     transition: all 0.3s linear;
                     &:hover{
@@ -534,7 +534,7 @@
                     padding: 0px 13px;
                     margin-bottom: 8px;
                     transition: all 0.3s ease 0s;
-                    color: $dip;
+                    color: var(--dip);
                     font-size: 12px;
                     &:hover{
 						background-image: -moz-linear-gradient( 0deg, rgb(132,144,255) 0%, rgb(98,189,252) 100%);
@@ -618,7 +618,7 @@
                 font-size: 14px;
                 transition: all 0.2s linear;
                 &:hover {
-                    color: $dip;
+                    color: var(--dip);
                 }
             }
         }
@@ -662,7 +662,7 @@
         h4{
             font-size: 18px;
             line-height: 25px;
-            color: $dip;
+            color: var(--dip);
         }
         .nav-left {
             text-align: left;
@@ -737,7 +737,7 @@
     h4 {
         text-align: center;
         margin-bottom: 50px;
-        color: $dip;
+        color: var(--dip);
         font-size: 18px;
     }
     h5 {
@@ -745,7 +745,7 @@
         margin-bottom: 0px;
     }
     a {
-        color: $dip;
+        color: var(--dip);
     }
     .comment-list {
         padding-bottom: 48px;
@@ -783,7 +783,7 @@
     }
     .btn-reply {
         background-color: #fff;
-        color: $dip;
+        color: var(--dip);
         border:1px solid #eee;
         padding: 2px 18px;
         font-size: 12px;
@@ -809,7 +809,7 @@
         margin-bottom: 50px;
         font-size: 18px;
         line-height: 22px;
-        color: $dip;
+        color: var(--dip);
     }
     .name {
         padding-left: 0px;

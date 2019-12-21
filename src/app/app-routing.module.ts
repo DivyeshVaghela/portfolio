@@ -7,8 +7,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, data: { index: 0 }  },
-  { path: 'portfolio', component: PortfolioComponent, data: { index: 1 }  },
-  { path: 'portfolio/:id', component: ProjectDetailsComponent, data: { index: 2 }  },
+  { path: 'project', component: PortfolioComponent, data: { index: 1 }  },
+  { path: 'project/:id', component: ProjectDetailsComponent, data: { index: 2 }  },
   { path: '**', redirectTo: 'home' }
 ];
 
