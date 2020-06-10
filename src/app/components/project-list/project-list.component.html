@@ -8,15 +8,15 @@
     <div class="projects_inner row">
       <ng-container *ngIf="projects else projectsPlaceholder">
         <div class="col-lg-4 col-sm-6 brand web mx-auto" *ngFor="let project of projects">
-          <div class="projects_item" animateOnScroll>
-            <img class="img-fluid" [img-preloader]="project.showcaseImage" alt="">
-            <div class="projects_text">
-              <a routerLink="/project/{{ project.id }}">
+          <a routerLink="/project/{{ project.id }}">
+            <div class="projects_item" animateOnScroll>
+              <img class="img-fluid" [img-preloader]="project.showcaseImage" alt="">
+              <div class="projects_text">
                 <h4 class="text-color-black">{{ project.title }}</h4>
-              </a>
-              <p class="text-color-off-black">{{ project.subtitle }}</p>
+                <p class="text-color-off-black">{{ project.subtitle }}</p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </ng-container>
       <ng-template #projectsPlaceholder>

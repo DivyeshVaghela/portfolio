@@ -7,13 +7,15 @@ export interface Project{
   details: string[];
 
   type: string[],
-  frontTechnologies: string[];
-  backTechnologies: string[];
-  database: string[];
+  frontTechnologies?: string[];
+  backTechnologies?: string[];
+  database?: string[];
 
   logo?: string;
   showcaseImage: string;
   screenshots?: {image: string, caption?: string}[];
 
   github?: string;
+  websiteLink?: string;
+  androidAppLink?: string;
 }

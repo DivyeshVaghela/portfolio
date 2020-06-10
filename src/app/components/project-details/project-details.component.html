@@ -55,9 +55,24 @@
           <div class="portfolio_right_text" *ngIf="project else contentPlaceholder" animateOnScroll>
             <h4>
               {{ project.title }}
-              <a href="{{ project.github }}" target="_blank" class="btn border-0 btn-lg pull-right text-info">
+              <div class="pull-right" *ngIf="isOnlyOneLink()">
+                <a *ngIf="project.github" href="{{ project.github }}" target="_blank" class="btn border-0 btn-lg text-info p-0">
                   <i class="fa fa-github fa-lg"></i></a>
+                <a *ngIf="project.websiteLink" href="{{ project.websiteLink }}" target="_blank" class="btn border-0 btn-lg text-info">
+                  <i class="fa fa-globe fa-lg"></i></a>
+                <a *ngIf="project.androidAppLink" href="{{ project.androidAppLink }}" target="_blank" class="btn border-0 btn-lg text-info">
+                  <i class="fa fa-android fa-lg"></i></a>
+              </div>
               <ng-container *ngIf="project.subtitle"><br><small>{{ project.subtitle }}</small></ng-container>
+              <br>
+              <div *ngIf="!isOnlyOneLink()">
+                <a *ngIf="project.github" href="{{ project.github }}" target="_blank" class="btn border-0 btn-lg text-info p-0 mt-1">
+                  <i class="fa fa-github fa-lg"></i></a>
+                <a *ngIf="project.websiteLink" href="{{ project.websiteLink }}" target="_blank" class="btn border-0 btn-lg text-info p-0 mt-1" [class.ml-3]="project.github">
+                  <i class="fa fa-globe fa-lg"></i></a>
+                <a *ngIf="project.androidAppLink" href="{{ project.androidAppLink }}" target="_blank" class="btn border-0 btn-lg text-info p-0 mt-1" [class.ml-3]="project.github || project.websiteLink">
+                  <i class="fa fa-android fa-lg"></i></a>
+              </div>
             </h4>
 
             <div *ngFor="let detail of project.details">
@@ -65,8 +80,12 @@
             </div>
 
             <dl class="row">
-              <dt class="col-sm-4">Technologies</dt>
-              <dd class="col-sm-8">{{ project.frontTechnologies.join(', ') }}, {{ project.backTechnologies.join(', ') }}, {{ project.database.join(', ') }}</dd>
+              <ng-container *ngIf="getTechnologies().length">
+                <dt class="col-sm-4">Technologies</dt>
+                <dd class="col-sm-8">
+                  {{ getTechnologies().join(', ') }}
+                </dd>
+              </ng-container>
 
               <dt class="col-sm-4">Type</dt>
               <dd class="col-sm-8">{{ project.type.join(', ') }}</dd>

@@ -31,4 +31,32 @@ export class ProjectDetailsComponent implements OnInit {
       });
   }
 
+  isOnlyOneLink(){
+    if (this.project){
+      if (this.project.github && !this.project.websiteLink && !this.project.androidAppLink)
+        return true;
+      else if (!this.project.github && this.project.websiteLink && !this.project.androidAppLink)
+        return true;
+      else if (!this.project.github && !this.project.websiteLink && this.project.androidAppLink)
+        return true;
+    }
+    return false;
+  }
+
+  private _technologies = null;
+  getTechnologies() {
+    if (this._technologies)
+      return this._technologies;
+
+    this._technologies = [];
+    if (this.project.frontTechnologies)
+      this._technologies.push(...this.project.frontTechnologies);
+    if (this.project.backTechnologies)
+      this._technologies.push(...this.project.backTechnologies);
+    if (this.project.database)
+      this._technologies.push(...this.project.database);
+
+    return this._technologies;
+  }
+
 }
