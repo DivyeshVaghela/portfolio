@@ -13,7 +13,11 @@ export interface Project{
 
   logo?: string;
   showcaseImage: string;
-  screenshots?: {image: string, caption?: string}[];
+  screenshots?: {
+    image: string, 
+    caption?: string,
+    noShadow?: boolean
+  }[];
 
   github?: string;
   websiteLink?: string;

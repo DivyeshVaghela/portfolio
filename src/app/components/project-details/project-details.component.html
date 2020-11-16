@@ -128,7 +128,9 @@
     </div>
 
     <div class="feature_inner gallary">
-      <div class="feature_item" *ngFor="let screenshot of project.screenshots" animateOnScroll>
+      <div class="feature_item" *ngFor="let screenshot of project.screenshots" 
+        [class.no-shadow]="screenshot.noShadow"
+        animateOnScroll>
         <a [href]="screenshot.image" data-type="image" data-fancybox="screenshots" [attr.data-caption]="screenshot.caption">
           <img class="img-fluid" [img-preloader]="screenshot.image" alt="">
         </a>
