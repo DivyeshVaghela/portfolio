@@ -71,9 +71,15 @@
 			margin-bottom: 18px;
 			&:last-child{
 				margin-bottom: 0px;
-			}
+      }
+      
+      .icon-wrapper {
+        width: 30px;
+        text-align: center;
+      }
+
 			h4{
-				text-align: right;
+				// text-align: right;
 				font-size: 14px;
 				font-family: $rob;
 				font-weight: normal;
