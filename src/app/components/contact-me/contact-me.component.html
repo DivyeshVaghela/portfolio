@@ -16,7 +16,7 @@
           </div>
           <div class="info_item">
             <i class="fa fa-phone"></i>
-            <h6>(+91) 90338 88452</h6>
+            <h6>(+91) 83204 31086</h6>
             <p>Contact anytime</p>
           </div>
           <div class="info_item">
@@ -42,8 +42,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Enter your name" formControlName="name"
-                (blur)="trimInput('name')"
-                [class.is-invalid]="isSubmissionInitiated && contactMe.get('name').invalid">
+                (blur)="trimInput('name')" [class.is-invalid]="isSubmissionInitiated && contactMe.get('name').invalid">
               <div class="invalid-feedback text-right" *ngIf="isSubmissionInitiated && contactMe.get('name').invalid">
                 <span *ngIf="contactMe.get('name').errors.required">Your name, please!</span>
                 <span *ngIf="contactMe.get('name').errors.pattern">Name sould contain alphabets only</span>
@@ -65,7 +64,8 @@
                 [class.is-invalid]="isSubmissionInitiated && contactMe.get('subject').invalid">
               <div class="invalid-feedback text-right"
                 *ngIf="isSubmissionInitiated && contactMe.get('subject').invalid">
-                <span *ngIf="contactMe.get('subject').errors.required || contactMe.get('subject').errors.pattern">Tag a proper subject</span>
+                <span *ngIf="contactMe.get('subject').errors.required || contactMe.get('subject').errors.pattern">Tag a
+                  proper subject</span>
               </div>
             </div>
           </div>
@@ -77,7 +77,8 @@
               </textarea>
               <div class="invalid-feedback text-right"
                 *ngIf="isSubmissionInitiated && contactMe.get('message').invalid">
-                <span *ngIf="contactMe.get('message').errors.required || contactMe.get('message').errors.pattern">Write your message content..</span>
+                <span *ngIf="contactMe.get('message').errors.required || contactMe.get('message').errors.pattern">Write
+                  your message content..</span>
               </div>
             </div>
           </div>
