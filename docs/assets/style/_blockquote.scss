@@ -1,0 +1,67 @@
+// Blockquote custom design
+.mb-wrap {
+  margin : 20px auto; 
+  padding : 20px; 
+  position : relative; 
+  width : 300px; 
+} 
+
+.mb-wrap p {
+  margin : 0; 
+  padding : 0; 
+}
+
+.mb-wrap blockquote {
+  margin : 0; 
+  padding : 0; 
+  position : relative;
+
+} 
+
+.mb-wrap blockquote:after{
+  border-radius: 50% 50% 50% 50%;
+  content: "❞";
+  font-family: 'icons';
+  font-size: 70px;
+  height: 130px;
+  left: 25%; top: -65px;
+  line-height: 130px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+  width: 130px;
+  opacity: .5;
+}
+
+.mb-wrap blockquote p {
+  // background : none repeat scroll 0 0 rgba(255, 255, 255, 0.5); 
+  box-shadow : 0 -6px 0 rgba(235, 150, 108, 0.2);
+  display : inline; 
+  font-family : Baskerville, Georgia, serif; 
+  font-style : italic; 
+  font-size : 28px; 
+  line-height : 46px; 
+  text-shadow : 0 1px 1px rgba(255, 255, 255, 0.5);  
+} 
+
+.mb-attribution {
+  text-align : right; 
+} 
+
+ .mb-author {
+  color : #D48158; 
+  font-size : 18px; 
+  font-weight : bold; 
+  padding-top : 10px; 
+  text-shadow : 0 1px 1px rgba(255, 255, 255, 0.1); 
+  text-transform : uppercase; 
+}  
+
+cite a {
+  color : #D7AA94; 
+  font-style : italic; 
+} 
+
+cite a:hover {
+  color : #D48158; 
+} 
