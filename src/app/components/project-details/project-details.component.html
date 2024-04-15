@@ -5,7 +5,8 @@
     <div class="container">
       <div class="banner_content text-center" animateOnScroll>
         <ng-container *ngIf="project else headerPlaceholder">
-          <img *ngIf="project.logo else projectTitle" [img-preloader]="project.logo" class="img-fluid project-logo" animateOnScroll>
+          <img *ngIf="project.logo else projectTitle" [img-preloader]="project.logo" class="img-fluid project-logo"
+            animateOnScroll>
           <ng-template #projectTitle>
             <h2 animateOnScroll>{{ project.title }}</h2>
           </ng-template>
@@ -43,7 +44,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="left_img">
-            <img class="img-fluid" *ngIf="project else imagePlceholder" [img-preloader]="project.showcaseImage" [alt]="project.title" animateOnScroll>
+            <img class="img-fluid" *ngIf="project else imagePlceholder" [img-preloader]="project.showcaseImage"
+              [alt]="project.title" animateOnScroll>
             <ng-template #imagePlceholder>
               <div class="ph-item" animateOnScroll>
                 <div class="ph-picture" style="height: 400px;"></div>
@@ -56,21 +58,27 @@
             <h4>
               {{ project.title }}
               <div class="pull-right" *ngIf="isOnlyOneLink()">
-                <a *ngIf="project.github" href="{{ project.github }}" target="_blank" class="btn border-0 btn-lg text-info p-0">
+                <a *ngIf="project.github" href="{{ project.github }}" target="_blank"
+                  class="btn border-0 btn-lg text-info p-0">
                   <i class="fa fa-github fa-lg"></i></a>
-                <a *ngIf="project.websiteLink" href="{{ project.websiteLink }}" target="_blank" class="btn border-0 btn-lg text-info">
+                <a *ngIf="project.websiteLink" href="{{ project.websiteLink }}" target="_blank"
+                  class="btn border-0 btn-lg text-info">
                   <i class="fa fa-globe fa-lg"></i></a>
-                <a *ngIf="project.androidAppLink" href="{{ project.androidAppLink }}" target="_blank" class="btn border-0 btn-lg text-info">
+                <a *ngIf="project.androidAppLink" href="{{ project.androidAppLink }}" download
+                  class="btn border-0 btn-lg text-info">
                   <i class="fa fa-android fa-lg"></i></a>
               </div>
               <ng-container *ngIf="project.subtitle"><br><small>{{ project.subtitle }}</small></ng-container>
               <br>
               <div *ngIf="!isOnlyOneLink()">
-                <a *ngIf="project.github" href="{{ project.github }}" target="_blank" class="btn border-0 btn-lg text-info p-0 mt-1">
+                <a *ngIf="project.github" href="{{ project.github }}" target="_blank"
+                  class="btn border-0 btn-lg text-info p-0 mt-1">
                   <i class="fa fa-github fa-lg"></i></a>
-                <a *ngIf="project.websiteLink" href="{{ project.websiteLink }}" target="_blank" class="btn border-0 btn-lg text-info p-0 mt-1" [class.ml-3]="project.github">
+                <a *ngIf="project.websiteLink" href="{{ project.websiteLink }}" target="_blank"
+                  class="btn border-0 btn-lg text-info p-0 mt-1" [class.ml-3]="project.github">
                   <i class="fa fa-globe fa-lg"></i></a>
-                <a *ngIf="project.androidAppLink" href="{{ project.androidAppLink }}" target="_blank" class="btn border-0 btn-lg text-info p-0 mt-1" [class.ml-3]="project.github || project.websiteLink">
+                <a *ngIf="project.androidAppLink" href="{{ project.androidAppLink }}" target="_blank"
+                  class="btn border-0 btn-lg text-info p-0 mt-1" [class.ml-3]="project.github || project.websiteLink">
                   <i class="fa fa-android fa-lg"></i></a>
               </div>
             </h4>
@@ -99,11 +107,11 @@
                   <div class="ph-col-4 big"></div>
                   <div class="ph-col-8 empty"></div>
                   <div class="ph-col-6"></div>
-                  
+
                   <br><br>
                   <div class="ph-col-12" *ngFor="let i of [1,2,3,4,5]"></div>
                   <div class="ph-col-8"></div>
-                  
+
                   <br><br>
                   <div class="ph-col-12" *ngFor="let i of [1,2,3]"></div>
                   <div class="ph-col-4"></div>
@@ -128,10 +136,10 @@
     </div>
 
     <div class="feature_inner gallary">
-      <div class="feature_item" *ngFor="let screenshot of project.screenshots" 
-        [class.no-shadow]="screenshot.noShadow"
+      <div class="feature_item" *ngFor="let screenshot of project.screenshots" [class.no-shadow]="screenshot.noShadow"
         animateOnScroll>
-        <a [href]="screenshot.image" data-type="image" data-fancybox="screenshots" [attr.data-caption]="screenshot.caption">
+        <a [href]="screenshot.image" data-type="image" data-fancybox="screenshots"
+          [attr.data-caption]="screenshot.caption">
           <img class="img-fluid" [img-preloader]="screenshot.image" alt="">
         </a>
       </div>
@@ -154,6 +162,6 @@
       </div>
     </div>
 
-  </div>    
+  </div>
 </section>
 <!--================End Screenshot Area =================-->
