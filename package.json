@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href https://divyeshvaghela.github.io/portfolio/",
+    "build:prod:gh-pages": "ng build --prod --base-href https://divyeshvaghela.github.io/portfolio/",
+    "build:prod:firebase": "ng build --prod --base-href https://divyesh-vaghela-portfolio.web.app/ --aot",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
